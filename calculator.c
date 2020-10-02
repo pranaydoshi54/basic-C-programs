@@ -1,26 +1,29 @@
 //C program to display simple calculator.
 
 #include<stdio.h>
+#includestdlib.h<>
 int main()
 {
-  int n1,n2;
+  int num1,num2;
   char operator;
+  
   printf("Enter an operator(+,-,/,*):");
-  scanf("%c",&operator);
+  scanf("%c", &operator);
 
   printf("Enter two numbers:");
-  scanf("%d%d",&n1,&n2);
-  switch(operator) {
-    case'+' : printf("%d + %d =%d",n1,n2,n1+n2);
+  scanf("%d%d", &num1,&num2);
+  
+  switch(operator)
+  {
+    case'+' : printf("%d + %d =%d",num1,num2,num1+num2);
               break;
-    case'-' : printf("%d - %d =%d",n1,n2,n1-n2);
+    case'-' : printf("%d - %d =%d",num1,num2,num1-num2);
               break;
-    case'/' : printf("%d / %d =%d",n1,n2,n1/n2);
+    case'/' : printf("%d / %d =%d",num1,num2,num1/num2);
               break;
-    case'*' : printf("%d * %d =%d",n1,n2,n1*n2);
+    case'*' : printf("%d * %d =%d",num1,num2,num1*num2);
               break;
 
-    default: printf("Error!operator is wrong");
-
+    default: printf("Error!\n Invalid Operator");
   }
 }
